@@ -294,14 +294,15 @@ p{
 }
 
 #Home::before{
-    content: " ";/* important */
+    content: "  ";/* important */
     width: 100%;
-    height: 100%;
+    height: 17%;
     position: absolute;
     top: 0;
     left: 0;
-    /* background : linear-gradient(to bottom, rgba(11, 0, 22, 0.6) 0%, rgba(11, 0, 22, 0.7) 65%, rgba(11, 0, 22, 1) 100%); */
+    background : linear-gradient(to bottom, rgba(11, 0, 22, 0.6) 0%, rgba(11, 0, 22, 0.7) 65%, rgba(11, 0, 22, 1) 100%);
 }
+
 #Home > section{
     z-index: 1;
     justify-content: center;
@@ -544,7 +545,7 @@ top: 35%;
 #Location:hover {
     opacity: 1;
 }
-/* Sponsors- */
+/* -----------------------------Sponsors------------------- */
 .Sponsors{
    width: 100%;
    display: flex;
@@ -565,16 +566,42 @@ top: 35%;
    width: 14%;
    margin: auto;
 }
+
+@media (max-width: 768px){
+    .Sponsors div img{
+        width: 14%;
+        margin: auto;
+     }
+}
+
 /*---------------------------- contact-------------------------------- */
 #Contact{
   flex-direction: row;
    justify-content: space-between;
 }
+
+@media (max-width: 768px){
+    #Contact{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+     }
+}
+
 .contact-parts{
   width: 30%;
   display: flex;
    flex-direction: column;
 }
+
+@media (max-width: 768px){
+    .contact-parts{
+        width: 45%;
+     }
+     .contact-parts:last-child {
+        width: 100%;
+     }
+}
+
 .contact-parts img{
   width: 6em;
 }
@@ -582,6 +609,13 @@ top: 35%;
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 2em;
+}
+
+@media (max-width: 768px){
+    .contact-parts h5{
+        width: 45%;
+     }
+
 }
 .contact-parts a{
   text-decoration: underline;
@@ -611,6 +645,14 @@ input {
    font-size: 1.5em;
    padding: 0.5em 1em;
     color: var(--primary);
+}
+
+@media (max-width: 768px){
+    .contact-parts input{
+        height: 2em;
+        width: 100%;
+     }
+    
 }
 
 .copyright-Line{
@@ -700,9 +742,9 @@ footer{
 .input {
     display: flex;
     justify-content: space-between;
-    width: 45%;
+    width: 100%;
     margin-right: 2em;
-    padding: 1em;
+    padding: 0.5em 1em ;
 }
 
 label {
@@ -723,6 +765,24 @@ label {
     width: 100%;
 }
 
-
+#Btn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px; 
+    z-index: 99; 
+    /* border: none;
+    outline: none;
+    background-color: red;
+    color: white;  */
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 50%; 
+    font-size: 18px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
 
 

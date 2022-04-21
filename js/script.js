@@ -4,7 +4,7 @@ $(document).ready(function () {
     // } else if ((document.documentElement.clientWidth >= 501) && (document.documentElement.clientWidth < 700)) {
     //      $(".owl-carousel").owlCarousel({items:2,nav:true});
     // } else {
-        $(".owl-carousel").owlCarousel({items:4,nav:true});
+        $(".owl-carousel").owlCarousel({items:3,nav:true});
     // }
    
 });
@@ -62,3 +62,19 @@ function closeForm() {
     })
 
 
+//Get the button:
+mybutton = document.getElementById("Btn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.documentElement.scrollTop = 0; 
+}

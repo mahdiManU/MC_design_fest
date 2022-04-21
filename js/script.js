@@ -1,12 +1,24 @@
 $(document).ready(function () {
-    // if (document.documentElement.clientWidth < 500) {
-    //     $(".owl-carousel").owlCarousel({items:1,nav:true});
-    // } else if ((document.documentElement.clientWidth >= 501) && (document.documentElement.clientWidth < 700)) {
-    //      $(".owl-carousel").owlCarousel({items:2,nav:true});
-    // } else {
-        $(".owl-carousel").owlCarousel({items:3,nav:true});
-    // }
-   
+   $('.owl-carousel').owlCarousel({
+       responsive: {
+            300:{
+                items: 1,
+                nav: false
+            },
+            600:{
+                items: 2,
+                nav: false
+            },
+            900:{
+                items: 3,
+                nav: false
+            },
+            1200:{
+                items: 4,
+                nav: false
+            },
+       }
+   })
 });
 
 const navbar = {
